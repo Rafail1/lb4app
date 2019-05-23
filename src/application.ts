@@ -31,12 +31,3 @@ export class KerzachiApplication extends BootMixin(
     }
 
 }
-/*
-*
-* auth_date: 1558613168
-first_name: "Telega"
-hash: "a54ae199ddccd778df85d602773a4ea1fd270aa195d4014dd1a2da466faae56d"
-id: 453964513
-photo_url: "https://t.me/i/userpic/320/eletag.jpg"
-username: "eletag"
-* */

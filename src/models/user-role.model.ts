@@ -12,7 +12,7 @@ export class UserRole extends Entity {
   id?: string;
 
   @belongsTo(() => User)
-  userId: string;
+  userId: number;
 
   @belongsTo(() => Role)
   roleId: string;

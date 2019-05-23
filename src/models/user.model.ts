@@ -3,11 +3,10 @@ import {Entity, model, property} from '@loopback/repository';
 @model()
 export class User extends Entity {
     @property({
-        type: 'string',
-        id: true,
-        generated: true
+        type: 'number',
+        id: true
     })
-    id?: string;
+    id?: number;
 
     @property({
         type: 'date',

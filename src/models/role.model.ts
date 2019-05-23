@@ -4,8 +4,7 @@ import {Entity, model, property} from '@loopback/repository';
 export class Role extends Entity {
   @property({
     type: 'string',
-    id: true,
-    generated: true
+    id: true
   })
   id?: string;
 

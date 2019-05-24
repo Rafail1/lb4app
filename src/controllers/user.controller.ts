@@ -2,6 +2,7 @@ import {post, requestBody, HttpErrors} from '@loopback/rest';
 import {UserRepository, UserRoleRepository} from '../repositories';
 import {repository} from '@loopback/repository';
 import {Credentials} from "../providers/auth-strategy.provider";
+import {User} from "../models";
 
 export class UserController {
   constructor(
@@ -23,4 +24,14 @@ export class UserController {
       roles: roles.map(r => r.roleId)
     };
   }
+  @post('/users/register')
+  async register(@requestBody() user: User) {
+    if(!this.userRepository.checkUser(user)) {
+      throw new HttpErrors.BadRequest('Bad User');
+    }
+    const userExist = await this.userRepository.count({id: user.id});
+    if (userExist) throw new HttpErrors.Unauthorized('User Exist');
+    return;
+  }
+
 }

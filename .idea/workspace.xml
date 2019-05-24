@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18725731-898e-4371-9135-58eefe4a71fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/providers/auth-action.provider.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/auth-metadata.provider.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/providers/auth-strategy.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/role.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/role.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user-role.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user-role.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ping.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ping.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datasources/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datasources/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datasources/mongo.datasource.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datasources/mongo.datasource.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sequence.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequence.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+            <state relative-caret-position="112">
+              <caret line="37" column="50" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="50" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -34,61 +45,77 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/user.model.ts">
+        <entry file="file://$PROJECT_DIR$/src/providers/auth-metadata.provider.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/repositories/user.repository.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="225">
+              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
               <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/models/user-role.model.ts">
+        <entry file="file://$PROJECT_DIR$/src/providers/auth-strategy.provider.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="255">
+              <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
               <folding>
-                <element signature="e#0#72#0" expanded="true" />
+                <element signature="e#0#67#0" expanded="true" />
+                <element signature="e#154#299#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/role.model.ts">
+        <entry file="file://$PROJECT_DIR$/src/controllers/ping.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="205">
+              <caret line="49" column="30" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#74#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@loopback/rest/src/rest.application.ts">
+        <entry file="file://$PROJECT_DIR$/src/controllers/user.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+            <state relative-caret-position="165">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/@loopback/core/src/application.ts">
+        <entry file="file://$PROJECT_DIR$/src/datasources/mongo.datasource.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/node--sofas.tpl.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="327" selection-start-line="327" selection-end-line="327" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="514" column="30" selection-start-line="514" selection-start-column="30" selection-end-line="514" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -104,16 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>start</find>
-      <find>export</find>
-      <find>PING_RESPONSE</find>
-      <find>passport</find>
-      <find>express</find>
-      <find>Strategy</find>
-      <find>StrategyCreated</find>
-      <find>AuthenticateFn</find>
-      <find>CustomStrategy</find>
-      <find>currentUser</find>
       <find>@loopback/authentication:</find>
       <find>@loopback/authentication</find>
       <find>3000</find>
@@ -130,10 +147,25 @@
       <find>RestBindings</find>
       <find>first_name</find>
       <find>userRepository</find>
+      <find>secured</find>
+      <find>Strategy</find>
+      <find>MyAuthenticationMetadata</find>
+      <find>verifyToken</find>
+      <find>verifyRoles</find>
+      <find>metadata</find>
+      <find>Credentials</find>
+      <find>MyAuthBindings.STRATEGY</find>
+      <find>findOne</find>
+      <find>UserPr</find>
+      <find>UserProfile</find>
+      <find>options-complete-aside</find>
+      <find>от</find>
+      <find>fields</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/src/providers</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -144,26 +176,32 @@
       <list>
         <option value="$PROJECT_DIR$/node_modules/@types/passport/index.d.ts" />
         <option value="$PROJECT_DIR$/src/providers/my.strategy.ts" />
-        <option value="$PROJECT_DIR$/src/providers/auth-strategy.provider.ts" />
-        <option value="$PROJECT_DIR$/src/sequence.ts" />
-        <option value="$PROJECT_DIR$/src/controllers/ping.controller.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/models/user.model.ts" />
         <option value="$PROJECT_DIR$/src/models/user-role.model.ts" />
-        <option value="$PROJECT_DIR$/src/application.ts" />
         <option value="$PROJECT_DIR$/src/models/role.model.ts" />
+        <option value="$PROJECT_DIR$/src/models/user.model.ts" />
+        <option value="$PROJECT_DIR$/src/providers/MyAuthStrategyProvider.ts" />
+        <option value="$PROJECT_DIR$/src/auth.ts" />
+        <option value="$PROJECT_DIR$/src/providers/MyAuthMetadataProvider.ts" />
+        <option value="$PROJECT_DIR$/src/datasources/index.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/providers/MyAuthActionProvider.ts" />
+        <option value="$PROJECT_DIR$/src/sequence.ts" />
+        <option value="$PROJECT_DIR$/src/providers/auth-metadata.provider.ts" />
+        <option value="$PROJECT_DIR$/src/application.ts" />
+        <option value="$PROJECT_DIR$/src/providers/auth-action.provider.ts" />
+        <option value="$PROJECT_DIR$/src/controllers/ping.controller.ts" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/template.php" />
+        <option value="$PROJECT_DIR$/src/datasources/mongo.datasource.json" />
+        <option value="$PROJECT_DIR$/src/controllers/user.controller.ts" />
+        <option value="$PROJECT_DIR$/src/providers/auth-strategy.provider.ts" />
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="293" />
@@ -177,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,22 +231,33 @@
             <path>
               <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
               <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
               <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="providers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
@@ -215,8 +265,11 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
@@ -261,7 +314,8 @@
       <option name="presentableId" value="Default" />
       <updated>1558595145655</updated>
       <workItem from="1558595148525" duration="10680000" />
-      <workItem from="1558612155848" duration="3776000" />
+      <workItem from="1558612155848" duration="5727000" />
+      <workItem from="1558689371823" duration="9785000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1558613512057</created>
@@ -277,22 +331,29 @@
       <option name="project" value="LOCAL" />
       <updated>1558614169801</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="first">
+      <created>1558616053828</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558616053828</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14456000" />
+    <option name="totallyTimeSpent" value="26192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.16768125" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.16934144" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50089765" side_tool="true" weight="0.24958494" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969563" weight="0.32937366" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4975097" visible="true" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -307,7 +368,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32982844" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.32982844" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -333,26 +394,16 @@
           <line>61</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/providers/auth-strategy.provider.ts</url>
+          <line>36</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/service-proxy/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/boot/src/interfaces.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="112" column="16" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@loopback/boot/dist/mixins/boot.mixin.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -389,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/passport-custom/lib/strategy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@loopback/authentication/src/types.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5">
@@ -421,38 +465,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/providers/my.strategy.ts" />
-    <entry file="file://$PROJECT_DIR$/src/providers/auth-strategy.provider.ts" />
     <entry file="file://$PROJECT_DIR$/node_modules/@loopback/authentication/src/authentication.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sequence.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ping.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -505,20 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/rest/src/rest.application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/core/src/application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.vscode/tasks.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -542,7 +544,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/repositories/user.repository.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="60">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
@@ -550,19 +552,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user.model.ts">
+    <entry file="file://$PROJECT_DIR$/src/models/user-role.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+        <state relative-caret-position="30">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -570,16 +565,210 @@
     <entry file="file://$PROJECT_DIR$/src/models/role.model.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user-role.model.ts">
+    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/rest/src/rest.application.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="765">
+          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/core/src/application.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/user.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthStrategyProvider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthMetadataProvider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="75" selection-start-column="60" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datasources/mongod.datasource.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#72#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datasources/mongod.datasource.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datasources/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datasources/mongo.datasource.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthActionProvider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auth.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequence.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/providers/auth-action.provider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/auth-action.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/repositories/role.repository.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/repository/dist/query.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datasources/mongo.datasource.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/user.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/providers/auth-strategy.provider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="35" column="50" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/passport-custom/lib/strategy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/authentication/dist/strategy-adapter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ping.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/auth-metadata.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/auth-strategy.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+            <element signature="e#154#299#0" expanded="true" />
           </folding>
         </state>
       </provider>

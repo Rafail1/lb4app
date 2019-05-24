@@ -9,10 +9,10 @@ export class User extends Entity {
     id?: number;
 
     @property({
-        type: 'date',
+        type: 'number',
         required: true,
     })
-    auth_date: Date;
+    auth_date: number;
 
     @property({
         type: 'string',

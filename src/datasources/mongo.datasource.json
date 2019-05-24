@@ -6,5 +6,6 @@
   "port": 27017,
   "user": "",
   "password": "",
-  "database": "kerzachi"
+  "database": "kerzachi",
+  "useNewUrlParser": true
 }

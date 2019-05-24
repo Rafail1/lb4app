@@ -4,7 +4,7 @@ const CustomStrategy = require('passport-custom');
 import {
     AUTHENTICATION_METADATA_KEY,
     AuthenticationBindings,
-    AuthenticationMetadata, UserProfile,
+    AuthenticationMetadata,
 } from "@loopback/authentication";
 import {UserRepository, UserRoleRepository} from "../repositories";
 import {HttpErrors} from "@loopback/rest/dist";

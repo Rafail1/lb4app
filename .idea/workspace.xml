@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18725731-898e-4371-9135-58eefe4a71fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/application.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/repositories/user.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/user.repository.ts" afterDir="false" />
     </list>
@@ -23,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/application.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="751">
+              <caret line="69" column="10" selection-start-line="53" selection-start-column="7" selection-end-line="69" selection-end-column="10" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/user.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="68" lean-forward="true" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+            <state relative-caret-position="142">
+              <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="22" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/repositories/user.repository.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+            <state relative-caret-position="262">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -65,24 +65,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/node--sofas.tpl.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="327" selection-start-line="327" selection-end-line="327" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="514" column="30" selection-start-line="514" selection-start-column="30" selection-end-line="514" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -94,8 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>@loopback/authentication</find>
-      <find>3000</find>
       <find>bootOptions</find>
       <find>getSync</find>
       <find>servers.RestServer</find>
@@ -124,6 +104,8 @@
       <find>fields</find>
       <find>MyAuthenticationMetadata</find>
       <find>MyAuthStrategyProvider</find>
+      <find>this.checkUser</find>
+      <find>checkUser</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -179,7 +161,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,6 +195,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,7 +257,8 @@
       <updated>1558595145655</updated>
       <workItem from="1558595148525" duration="10680000" />
       <workItem from="1558612155848" duration="5727000" />
-      <workItem from="1558689371823" duration="10847000" />
+      <workItem from="1558689371823" duration="11737000" />
+      <workItem from="1558938919285" duration="1692000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1558613512057</created>
@@ -312,24 +295,31 @@
       <option name="project" value="LOCAL" />
       <updated>1558701629730</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="first">
+      <created>1558702716195</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1558702716195</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27254000" />
+    <option name="totallyTimeSpent" value="29836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.16934144" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.17100166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50089765" side_tool="true" weight="0.24958494" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969563" weight="0.32937366" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4975097" weight="0.39956802" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4975097" visible="true" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -548,29 +538,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthStrategyProvider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthMetadataProvider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="75" selection-start-column="60" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/datasources/mongod.datasource.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthStrategyProvider.ts" />
+    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthMetadataProvider.ts" />
+    <entry file="file://$PROJECT_DIR$/src/datasources/mongod.datasource.ts" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="481">
@@ -578,9 +548,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/datasources/mongod.datasource.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datasources/mongod.datasource.json" />
     <entry file="file://$PROJECT_DIR$/src/datasources/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -597,20 +565,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthActionProvider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/auth.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/MyAuthActionProvider.ts" />
+    <entry file="file://$PROJECT_DIR$/src/auth.ts" />
     <entry file="file://$PROJECT_DIR$/src/sequence.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -639,13 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/datasources/mongo.datasource.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -680,17 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/auth-strategy.provider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-            <element signature="e#154#286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/providers/auth-metadata.provider.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -708,10 +646,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/datasources/mongo.datasource.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/providers/auth-strategy.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+            <element signature="e#154#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/application.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        <state relative-caret-position="751">
+          <caret line="69" column="10" selection-start-line="53" selection-start-column="7" selection-end-line="69" selection-end-column="10" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -720,8 +676,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/repositories/user.repository.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        <state relative-caret-position="262">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
@@ -730,8 +686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/user.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="68" lean-forward="true" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+        <state relative-caret-position="142">
+          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="22" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>

@@ -1,6 +1,6 @@
 import {Request, RestBindings, get, ResponseObject} from '@loopback/rest';
 import {inject} from '@loopback/context';
-import {secured, SecuredType} from "../providers/auth-strategy.provider";
+import {secured, SecuredType} from "../telegram-authorization";
 /**
  * OpenAPI response for ping()
  */

@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18725731-898e-4371-9135-58eefe4a71fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/models/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-authorization/component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-authorization/decorators/auth.decorator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-authorization/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-authorization/permission-key.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-authorization/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-bot/component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-bot/controllers/bot.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-bot/controllers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-bot/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-bot/models/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/telegram-bot/repositories/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/application.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ping.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ping.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/auth-action.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/telegram-authorization/providers/auth-action.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/auth-metadata.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/telegram-authorization/providers/auth-metadata.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/auth-strategy.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/telegram-authorization/providers/auth-strategy.provider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/user.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/user.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sequence.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/sequence.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,23 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/models/bot.model.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/user.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="107" lean-forward="true" selection-start-line="22" selection-start-column="107" selection-end-line="22" selection-end-column="107" />
+            <state relative-caret-position="-150">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -38,34 +45,70 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/user-role.model.ts">
+        <entry file="file://$PROJECT_DIR$/src/controllers/ping.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+            <state relative-caret-position="276">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="40" />
               <folding>
-                <element signature="e#0#72#0" expanded="true" />
+                <element signature="e#0#74#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/repositories/user.repository.ts">
+        <entry file="file://$PROJECT_DIR$/src/telegram-bot/controllers/bot.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="195">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/providers/auth-action.provider.ts">
+        <entry file="file://$PROJECT_DIR$/src/telegram-authorization/component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="150">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/telegram-bot/component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="83" selection-start-line="13" selection-start-column="83" selection-end-line="13" selection-end-column="83" />
+              <folding>
+                <element signature="e#0#54#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/@loopback/core/src/component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="82" selection-start-line="82" selection-end-line="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/telegram-authorization/providers/auth-strategy.provider.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#67#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,15 +124,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>CONFIG</find>
-      <find>port</find>
-      <find>vsc</find>
-      <find>RestBindings</find>
-      <find>first_name</find>
-      <find>secured</find>
-      <find>Strategy</find>
-      <find>verifyToken</find>
-      <find>verifyRoles</find>
       <find>metadata</find>
       <find>Credentials</find>
       <find>MyAuthBindings.STRATEGY</find>
@@ -100,7 +134,6 @@
       <find>от</find>
       <find>fields</find>
       <find>MyAuthenticationMetadata</find>
-      <find>MyAuthStrategyProvider</find>
       <find>this.checkUser</find>
       <find>Table</find>
       <find>ACTIVE</find>
@@ -111,11 +144,22 @@
       <find>checkUser</find>
       <find>userRepository</find>
       <find>bot</find>
+      <find>footerRaiting__text</find>
+      <find>pla</find>
+      <find>category d-flex-start</find>
+      <find>field_state</find>
+      <find>$row-&gt;_field_data[&quot;nid&quot;][&quot;entity&quot;]-&gt;field_state[&quot;und&quot;]</find>
+      <find>MyAuthActionProvider</find>
+      <find>type</find>
+      <find>MyAuthStrategyProvider</find>
+      <find>authenticate</find>
+      <find>bind</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
       <dir>$PROJECT_DIR$/src/providers</dir>
       <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/../divan</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -124,29 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/node_modules/@types/passport/index.d.ts" />
-        <option value="$PROJECT_DIR$/src/providers/my.strategy.ts" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/Dockerfile" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/models/user-role.model.ts" />
-        <option value="$PROJECT_DIR$/src/models/role.model.ts" />
-        <option value="$PROJECT_DIR$/src/models/user.model.ts" />
-        <option value="$PROJECT_DIR$/src/providers/MyAuthStrategyProvider.ts" />
-        <option value="$PROJECT_DIR$/src/auth.ts" />
-        <option value="$PROJECT_DIR$/src/providers/MyAuthMetadataProvider.ts" />
-        <option value="$PROJECT_DIR$/src/datasources/index.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/providers/MyAuthActionProvider.ts" />
-        <option value="$PROJECT_DIR$/src/sequence.ts" />
-        <option value="$PROJECT_DIR$/src/providers/auth-metadata.provider.ts" />
-        <option value="$PROJECT_DIR$/src/providers/auth-action.provider.ts" />
-        <option value="$PROJECT_DIR$/src/controllers/ping.controller.ts" />
-        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/template.php" />
-        <option value="$PROJECT_DIR$/src/datasources/mongo.datasource.json" />
-        <option value="$PROJECT_DIR$/src/providers/auth-strategy.provider.ts" />
-        <option value="$PROJECT_DIR$/src/application.ts" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/node--bed.tpl.php" />
         <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/node--mattress.tpl.php" />
         <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/node--namatrasniki.tpl.php" />
@@ -155,10 +176,49 @@
         <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/node--podushki.tpl.php" />
         <option value="&lt;bfce27f9-c636-49b4-9311-ad28bbbe56a5&gt;/cheshire_apps/ist/cookies/flot.anya.json" />
         <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/modules/search/search.extender.inc" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/modules/custom_search/theme/custom_search-result.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views-view-fields--products-in-share--block.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views-view-fields--popula-products--block.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views-view-row.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/css/main.css" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/tags/views-view-fields--akkordeon--page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/template.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog-common/views-view-field--field-state.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog-aktsiya/views-view-fields--catalog-aktsiya--page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog-in-stock/views-view-fields--catalog-in-stock--page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog-furniture/views-view-fields--catalog-beds--page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog-furniture/views-view-fields--catalog-furniture--page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog-mattresses/views-view-fields--catalog-mattresses--page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog_accessories/views-view-fields--accessories-for-sleep--page.tpl.php" />
+        <option value="&lt;eec04f79-1796-4e49-a4d0-351ac4e9df42&gt;/public_html/sites/all/themes/divan/templates/views/catalog-new/views-view-fields--catalog-new-products--page.tpl.php" />
         <option value="$PROJECT_DIR$/src/models/bot.model.ts" />
-        <option value="$PROJECT_DIR$/src/controllers/user.controller.ts" />
+        <option value="$PROJECT_DIR$/dist/repositories/user.repository.d.ts" />
+        <option value="$PROJECT_DIR$/src/repositories/bot.repository.ts" />
         <option value="$PROJECT_DIR$/src/repositories/user.repository.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/permission-key.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/types.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/decorators/auth.decorator.ts" />
+        <option value="$PROJECT_DIR$/src/providers/auth-strategy.provider.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/providers/auth-strategy.provider.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/providers/auth-action.provider.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/providers/auth-metadata.provider.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/index.ts" />
+        <option value="$PROJECT_DIR$/src/sequence.ts" />
+        <option value="$PROJECT_DIR$/src/controllers/ping.controller.ts" />
+        <option value="$PROJECT_DIR$/src/controllers/user.controller.ts" />
         <option value="$PROJECT_DIR$/src/models/index.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/models/index.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/models/bot.model.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/controllers/index.ts" />
+        <option value="$PROJECT_DIR$/src/repositories/index.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/repositories/index.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/index.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-authorization/component.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/repositories/bot.repository.ts" />
+        <option value="$PROJECT_DIR$/src/application.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/controllers/bot.controller.ts" />
+        <option value="$PROJECT_DIR$/src/telegram-bot/component.ts" />
       </list>
     </option>
   </component>
@@ -206,13 +266,27 @@
               <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
               <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="telegram-authorization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="telegram-authorization" type="462c0819:PsiDirectoryNode" />
               <item name="providers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
               <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="repositories" type="462c0819:PsiDirectoryNode" />
+              <item name="telegram-bot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kerzachi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kerzachi" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="telegram-bot" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -238,6 +312,18 @@
     <property name="node.js.selected.package.tslint" value="$PROJECT_DIR$/node_modules/tslint" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/telegram-bot" />
+      <recent name="$PROJECT_DIR$/src/telegram-bot/repositories" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/telegram-bot/repositories" />
+      <recent name="$PROJECT_DIR$/src/telegram-bot/models" />
+      <recent name="$PROJECT_DIR$/src/telegram-bot" />
+      <recent name="$PROJECT_DIR$/src/telegram-authorization" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -284,7 +370,9 @@
       <workItem from="1558938919285" duration="2337000" />
       <workItem from="1558944178544" duration="3798000" />
       <workItem from="1559026929613" duration="4000" />
-      <workItem from="1559206393979" duration="8062000" />
+      <workItem from="1559206393979" duration="8086000" />
+      <workItem from="1559226621908" duration="687000" />
+      <workItem from="1559285366263" duration="10252000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1558613512057</created>
@@ -342,20 +430,26 @@
       <option name="project" value="LOCAL" />
       <updated>1559224033023</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="first">
+      <created>1559224907596</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1559224907596</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42345000" />
+    <option name="totallyTimeSpent" value="53308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.1765357" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49910232" visible="true" weight="0.17376868" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.50089765" side_tool="true" weight="0.24958494" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="File Transfer" weight="0.32937366" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4969563" weight="0.32937366" />
@@ -368,11 +462,12 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5030437" side_tool="true" weight="0.3297414" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969563" visible="true" weight="0.33045357" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.4969563" weight="0.33045357" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32982844" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.2401771" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -402,136 +497,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/passport-custom/lib/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/authentication/src/types.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/authentication/src/keys.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/passport/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="80" column="92" selection-start-line="79" selection-start-column="7" selection-end-line="80" selection-end-column="92" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/my.strategy.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/authentication/src/authentication.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/rest/src/rest.server.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="193" column="49" selection-start-line="193" selection-start-column="49" selection-end-line="193" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/boot/src/mixins/boot.mixin.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="49" column="23" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/service-proxy/src/mixins/service.mixin.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/repository/src/mixins/repository.mixin.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-590">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/core/src/lifecycle-registry.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="226" column="4" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.vscode/tasks.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.vscode/settings.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/role.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/rest/src/rest.application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/core/src/application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/providers/MyAuthStrategyProvider.ts" />
     <entry file="file://$PROJECT_DIR$/src/providers/MyAuthMetadataProvider.ts" />
     <entry file="file://$PROJECT_DIR$/src/datasources/mongod.datasource.ts" />
@@ -561,16 +526,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/providers/MyAuthActionProvider.ts" />
     <entry file="file://$PROJECT_DIR$/src/auth.ts" />
-    <entry file="file://$PROJECT_DIR$/src/sequence.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/providers/auth-action.provider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -613,47 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/ping.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="41" column="26" lean-forward="true" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/auth-metadata.provider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/auth-strategy.provider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="75" column="17" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
-            <element signature="e#154#286#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/application.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="69" column="10" selection-start-line="53" selection-start-column="7" selection-end-line="69" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/datasources/mongo.datasource.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -674,13 +588,6 @@
     <entry file="file://$PROJECT_DIR$/tslint.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/user.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@loopback/context/dist/inject.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -695,49 +602,267 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/providers/auth-action.provider.ts">
+    <entry file="file://$PROJECT_DIR$/src/models/role.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/repositories/user.repository.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/user-role.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        <state relative-caret-position="210">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="16" />
           <folding>
             <element signature="e#0#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/user.controller.ts">
+    <entry file="file://$PROJECT_DIR$/src/models/user.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="107" lean-forward="true" selection-start-line="22" selection-start-column="107" selection-end-line="22" selection-end-column="107" />
+        <state relative-caret-position="165">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/repositories/user.repository.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="6" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/bot.model.ts">
+    <entry file="file://$PROJECT_DIR$/src/repositories/user-role.repository.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state>
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/repositories/user.repository.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/permission-key.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/decorators/auth.decorator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequence.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/providers/auth-metadata.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/models/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/controllers/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="17" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/providers/auth-action.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/models/bot.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/controllers/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/types.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/repositories/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/repositories/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/application.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/repositories/bot.repository.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="59" selection-start-column="59" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/user.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/ping.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/repositories/bot.repository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/controllers/bot.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-authorization/providers/auth-strategy.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="22" lean-forward="true" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@loopback/core/src/component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="82" selection-start-line="82" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/telegram-bot/component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="83" selection-start-line="13" selection-start-column="83" selection-end-line="13" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>

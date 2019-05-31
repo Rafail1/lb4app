@@ -1,16 +1,14 @@
 import {inject, Provider, ValueOrPromise} from "@loopback/context";
 import {Strategy} from "passport";
+
 const CustomStrategy = require('passport-custom');
-import {
-    AUTHENTICATION_METADATA_KEY,
-    AuthenticationBindings,
-    AuthenticationMetadata,
-} from "@loopback/authentication";
-import {UserRepository, UserRoleRepository} from "../repositories";
+import {AuthenticationBindings} from "@loopback/authentication";
+import {UserRepository, UserRoleRepository} from "../../repositories";
 import {HttpErrors} from "@loopback/rest/dist";
-import {User} from "../models";
-import {MethodDecoratorFactory} from "@loopback/metadata";
+import {User} from "../../models";
 import {IncomingMessage} from "http";
+import {SecuredType} from "../permission-key";
+import {Credentials, MyAuthenticationMetadata} from "../types";
 
 export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
     constructor(
@@ -21,12 +19,13 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
 
     value(): ValueOrPromise<Strategy | undefined> {
         if (!this.metadata) return;
-        return new CustomStrategy((payload:IncomingMessage, done:(err: Error | null, user?: User | false, info?: Object) => void) => {
+        return new CustomStrategy((payload: IncomingMessage, done: (err: Error | null, user?: User | false, info?: Object) => void) => {
             const hash = payload.headers.authorization || '';
             this.verifyToken({hash}, done)
         });
 
     }
+
     async verifyToken(
         payload: Credentials,
         done: (err: Error | null, user?: User | false, info?: Object) => void,
@@ -71,34 +70,4 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
 
         throw new HttpErrors.Unauthorized('Invalid authorization');
     }
-}
-
-export interface Credentials {
-    hash:string
-}
-
-export enum SecuredType {
-    IS_AUTHENTICATED, // any authenticated user
-    PERMIT_ALL, // bypass security check, permit everyone
-    HAS_ANY_ROLE, // user must have one or more roles specified in the `roles` attribute
-    HAS_ROLES, // user mast have all roles specified in the `roles` attribute
-    DENY_ALL, // you shall not pass!
-}
-export interface MyAuthenticationMetadata extends AuthenticationMetadata {
-    type: SecuredType;
-    roles: string[];
-}
-export function secured(
-    type: SecuredType = SecuredType.IS_AUTHENTICATED, // more on this below
-    roles: string[] = [],
-    strategy: string = 'jwt',
-    options?: object,
-) {
-    // we will use a custom interface. more on this below
-    return MethodDecoratorFactory.createDecorator<MyAuthenticationMetadata>(AUTHENTICATION_METADATA_KEY, {
-        type,
-        roles,
-        strategy,
-        options,
-    });
 }

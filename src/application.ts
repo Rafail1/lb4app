@@ -11,11 +11,8 @@ import * as path from 'path';
 import {MySequence} from './sequence';
 import {UserRepository, UserRoleRepository, RoleRepository} from './repositories';
 import {User} from "./models";
-import * as crypto from 'crypto';
-import {AuthenticationBindings} from "@loopback/authentication";
-import {MyAuthStrategyProvider} from "./providers/auth-strategy.provider";
-import {MyAuthActionProvider, MyAuthBindings} from "./providers/auth-action.provider";
-import {MyAuthMetadataProvider} from "./providers/auth-metadata.provider";
+import {TelegramAuthorizationComponent} from "./telegram-authorization";
+import {TelegramBotComponent} from "./telegram-bot";
 export class KerzachiApplication extends BootMixin(
     ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
@@ -25,13 +22,10 @@ export class KerzachiApplication extends BootMixin(
         this.bind(RestExplorerBindings.CONFIG).to({
             path: '/explorer',
         });
-        this.bind(AuthenticationBindings.METADATA).toProvider(MyAuthMetadataProvider);
-        this.bind(MyAuthBindings.STRATEGY).toProvider(MyAuthStrategyProvider);
-        this.bind(AuthenticationBindings.AUTH_ACTION).toProvider(MyAuthActionProvider);
+        this.component(TelegramAuthorizationComponent);
+        this.component(TelegramBotComponent);
         this.component(RestExplorerComponent);
-        this.bind(AuthenticationBindings.STRATEGY).toProvider(
-            MyAuthStrategyProvider,
-        );
+
         this.projectRoot = __dirname;
 
         this.bind('repositories.UserRepository').toClass(UserRepository);

@@ -2,8 +2,8 @@ import {inject} from "@loopback/context";
 import {AuthMetadataProvider} from "@loopback/authentication/dist/providers";
 import {CoreBindings, Constructor} from "@loopback/core";
 import {MetadataInspector} from "@loopback/metadata";
-import {MyAuthenticationMetadata} from "./auth-strategy.provider";
 import {AUTHENTICATION_METADATA_KEY} from "@loopback/authentication";
+import {MyAuthenticationMetadata} from "../types";
 
 export class MyAuthMetadataProvider extends AuthMetadataProvider {
     constructor(

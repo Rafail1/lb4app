@@ -1,8 +1,9 @@
 import {BindingKey, Getter, inject, Provider, Setter} from "@loopback/context";
 import {AuthenticateFn, AuthenticationBindings, StrategyAdapter, UserProfile} from "@loopback/authentication";
 import {Strategy} from "passport";
-import {MyAuthenticationMetadata, SecuredType} from "./auth-strategy.provider";
 import {Request} from "@loopback/rest";
+import {MyAuthenticationMetadata} from "../types";
+import {SecuredType} from "../permission-key";
 export namespace MyAuthBindings {
     export const STRATEGY = BindingKey.create<Strategy | undefined>('authentication.strategy');
 }

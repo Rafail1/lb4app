@@ -10,12 +10,6 @@ export class Bot extends Entity {
     id?: number;
 
     @property({
-        type: 'boolean',
-        default: false,
-    })
-    active?: boolean;
-
-    @property({
         type: 'string',
         required: true,
     })
@@ -30,6 +24,17 @@ export class Bot extends Entity {
         type: 'string'
     })
     username?: string;
+    @property({
+        type: 'boolean',
+        default: false,
+    })
+    active?: boolean;
+
+    @property({
+        type: 'string'
+    })
+    remoteAddr?: string;
+
 
     @belongsTo(() => User)
     userId: number;

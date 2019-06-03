@@ -15,6 +15,7 @@ export class BotRepository extends DefaultCrudRepository<
   async create(entity: Bot, options?: Options): Promise<Bot> {
     const bot = new TelegramBot(entity.apiKey, { polling: false });
     const me = await bot.getMe();
+
     entity.id = me.id;
     entity.first_name = me.first_name;
     entity.username = me.username;

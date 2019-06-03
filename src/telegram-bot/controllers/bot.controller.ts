@@ -1,6 +1,6 @@
-import { get, param, post, requestBody } from '@loopback/rest';
+import { get, param, post, requestBody, HttpErrors } from '@loopback/rest';
 import { BotRepository } from "../repositories";
-import { repository } from '@loopback/repository';
+import { repository, Filter } from '@loopback/repository';
 import { secured, SecuredType, MyAuthActionProvider } from "../../telegram-authorization";
 import { Bot } from '../models';
 import { AuthenticationBindings, AuthenticateFn, UserProfile } from '@loopback/authentication';
@@ -16,12 +16,24 @@ export class BotController extends Owner {
         super(currentUser)
     }
 
-    @post('create-bot')
+    @post('/bots')
     @secured(SecuredType.IS_AUTHENTICATED)
-    async createBot(@requestBody() bot: Bot) {
+    async createBot(@requestBody({ required: true }) bot: Bot) {
         bot.userId = this.currentUser.id!;
-        const newBot = await this.botRepository.create(bot)
-        return newBot
+        try {
+            return await this.botRepository.create(bot)
+        } catch (e) {
+            console.log(e)
+            return e
+        }
+    }
+
+    @get('/bots')
+    @secured(SecuredType.IS_AUTHENTICATED)
+    async getBots(@param.query.object('filter') filter: Filter = {}) {
+        this.makeFilter(filter)
+        console.log(filter);
+        return await this.botRepository.find(filter)
     }
 
     @get('pingmy/{id}')

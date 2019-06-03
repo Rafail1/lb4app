@@ -1,13 +1,13 @@
-import {Entity, model, property, belongsTo} from '@loopback/repository';
-import {User} from "../../models";
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { User } from "../../models";
 
-@model({settings: {}})
+@model({ settings: {} })
 export class Bot extends Entity {
     @property({
-        type: 'string',
+        type: 'number',
         id: true,
     })
-    id?: string;
+    id?: number;
 
     @property({
         type: 'boolean',
@@ -20,6 +20,16 @@ export class Bot extends Entity {
         required: true,
     })
     apiKey: string;
+
+    @property({
+        type: 'string'
+    })
+    first_name?: string;
+
+    @property({
+        type: 'string'
+    })
+    username?: string;
 
     @belongsTo(() => User)
     userId: number;

@@ -5,10 +5,10 @@ import { secured, SecuredType, MyAuthActionProvider } from "../../telegram-autho
 import { Bot } from '../models';
 import { AuthenticationBindings, AuthenticateFn, UserProfile } from '@loopback/authentication';
 import { inject } from '@loopback/core';
-import { OwnerMixin } from '../../mixins/owner.mixin';
 import { User } from '../../models';
+import { Owner } from '../../custom/owner';
 
-export class BotController extends OwnerMixin {
+export class BotController extends Owner {
     constructor(
         @repository(BotRepository) private botRepository: BotRepository,
         @inject(AuthenticationBindings.CURRENT_USER) protected currentUser: User

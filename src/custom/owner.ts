@@ -3,7 +3,7 @@ import { AuthenticationBindings } from "@loopback/authentication";
 import { inject } from "@loopback/core";
 import { User } from "../models";
 
-export class OwnerMixin {
+export class Owner {
   constructor(@inject(AuthenticationBindings.CURRENT_USER) protected currentUser: User) {
 
   }

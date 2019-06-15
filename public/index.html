@@ -15,7 +15,8 @@
       text-align: center;
     }
 
-    a, a:visited {
+    a,
+    a:visited {
       color: #3f5dff;
     }
 
@@ -23,7 +24,9 @@
       margin-left: 10px;
     }
 
-    a:hover, a:focus, a:active {
+    a:hover,
+    a:focus,
+    a:active {
       color: #001956;
     }
 
@@ -62,13 +65,16 @@
     <h3>OpenAPI spec: <a href="/openapi.json">/openapi.json</a></h3>
     <h3>API Explorer: <a href="/explorer">/explorer</a></h3>
   </div>
-
+  <form action="/upload">
+    <input type="file" name="photo" />
+  </form>
   <footer class="power">
     <a href="https://v4.loopback.io" target="_blank">
       <img src="https://loopback.io/images/branding/powered-by-loopback/blue/powered-by-loopback-sm.png" />
     </a>
   </footer>
-  <script async src="https://telegram.org/js/telegram-widget.js?5" data-telegram-login="AuthRafBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+  <script async src="https://telegram.org/js/telegram-widget.js?5" data-telegram-login="AuthRafBot" data-size="large"
+    data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
   <script type="text/javascript">
     function onTelegramAuth(user) {
       console.log(user);

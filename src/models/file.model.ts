@@ -9,8 +9,13 @@ export class File extends Entity {
   })
   id?: string;
 
+  @property({
+    type: 'string'
+  })
+  uniqueId?: string;
+
   @belongsTo(() => Bot)
-  botId: string
+  botId: number
 
   constructor(data?: Partial<File>) {
     super(data);

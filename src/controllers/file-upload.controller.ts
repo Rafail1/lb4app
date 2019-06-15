@@ -7,10 +7,12 @@ import { post, requestBody, Request, RestBindings, Response, get } from "@loopba
 import { BotRepository } from "../telegram-bot";
 import { repository } from "@loopback/repository";
 import fs = require("fs");
+import { FileRepository } from "../repositories";
 
 export class FileUploadController {
   storage: multer.StorageEngine;
   constructor(
+    @repository(FileRepository) private fileRepository: FileRepository,
     @repository(BotRepository) private botRepository: BotRepository) {
     this.storage = multer.diskStorage({
       destination: function (req, file, cb) {
@@ -52,20 +54,26 @@ export class FileUploadController {
     @inject(RestBindings.Http.RESPONSE) response: Response,
   ): Promise<object> {
     const upload = multer({ storage: this.storage });
-    const bot = await this.botRepository.getBot(773534786);
+    const botId = 773534786;
+    const bot = await this.botRepository.getBot(botId);
 
     return new Promise<object>((resolve, reject) => {
       upload.any()(request, response, async err => {
         if (err) reject(err);
         else {
+
           const files = Object.values(request.files)
           const path = files[0].path
-          const fi = await bot.sendPhoto(453964513, fs.createReadStream(path)) // загружаю фотку
-
-          resolve({
-            files: fi,
-            fields: (request as any).fields,
-          });
+          const fi = await bot.sendPhoto(453964513, fs.createReadStream(path))
+          if (!fi || !fi.photo) {
+            const error = new Error('error uploading file to bot');
+            return reject(error)
+          }
+          const l = fi.photo.length
+          const file = await this.fileRepository.create({ id: fi.photo[l - 1].file_id, botId, uniqueId: "123" })
+          fs.unlinkSync(path)
+          const tFile = await bot.getFileLink(file.id!)
+          resolve({ link: tFile });
         }
       });
     });

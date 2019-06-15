@@ -24,11 +24,14 @@ import { FileRepository } from '../repositories';
 import { inject } from '@loopback/core';
 import multer = require('multer');
 import { resolve } from 'url';
+import { BotRepository } from '../telegram-bot';
 export class FileController {
   storage: multer.StorageEngine;
   constructor(
     @repository(FileRepository)
     public fileRepository: FileRepository,
+    @repository(BotRepository)
+    public botRepository: BotRepository
   ) { }
 
   @post('/files', {
@@ -139,5 +142,19 @@ export class FileController {
   })
   async deleteById(@param.path.string('id') id: string): Promise<void> {
     await this.fileRepository.deleteById(id);
+  }
+
+  @get('/testFile', {
+    responses: {
+      '204': {
+        description: 'File send success',
+      },
+    },
+  })
+  async testFile() {
+    const file = await this.fileRepository.findOne()
+    const botId = 773534786;
+    const bot = await this.botRepository.getBot(botId);
+    await bot.sendPhoto(453964513, file!.id!)
   }
 }

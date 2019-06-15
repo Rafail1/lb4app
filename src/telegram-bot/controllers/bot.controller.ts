@@ -95,7 +95,7 @@ export class BotController extends Owner {
     }
 
     @secured(SecuredType.IS_AUTHENTICATED)
-    @del('/todos/{id}', {
+    @del('/bots/{id}', {
         responses: {
             '204': {
                 description: 'Bot DELETE success',
@@ -108,7 +108,7 @@ export class BotController extends Owner {
     }
 
     @secured(SecuredType.IS_AUTHENTICATED)
-    @post('/todos/{id}/stop', {
+    @post('/bots/{id}/stop', {
         responses: {
             '204': {
                 description: 'Bot stop success',
@@ -121,7 +121,7 @@ export class BotController extends Owner {
     }
 
     @secured(SecuredType.IS_AUTHENTICATED)
-    @post('/todos/{id}/start', {
+    @post('/bots/{id}/start', {
         responses: {
             '204': {
                 description: 'Bot start success',

@@ -65,8 +65,9 @@
     <h3>OpenAPI spec: <a href="/openapi.json">/openapi.json</a></h3>
     <h3>API Explorer: <a href="/explorer">/explorer</a></h3>
   </div>
-  <form action="/upload">
+  <form action="/upload" method="POST" enctype="multipart/form-data">
     <input type="file" name="photo" />
+    <button type="submit">submit</button>
   </form>
   <footer class="power">
     <a href="https://v4.loopback.io" target="_blank">

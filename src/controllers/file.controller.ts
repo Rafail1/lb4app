@@ -29,49 +29,7 @@ export class FileController {
   constructor(
     @repository(FileRepository)
     public fileRepository: FileRepository,
-  ) {
-    this.storage = multer.diskStorage({
-      destination: function (req, file, cb) {
-        cb(null, '/tmp/my-uploads')
-      },
-      filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now())
-      }
-    })
-  }
-
-  @post('/upload', {
-    responses: {
-      200: {
-        content: {
-          'application/json': {
-            schema: {
-              type: 'object',
-            },
-          },
-        },
-        description: '',
-      },
-    },
-  })
-  async upload(
-    @requestBody({
-      description: 'multipart/form-data value.',
-      required: true,
-      content: {
-        'multipart/form-data': {
-          'x-parser': 'stream',
-          schema: { type: 'object' },
-        },
-      },
-    })
-    request: Request,
-    @inject(RestBindings.Http.RESPONSE) response: Response,
-  ): Promise<Object> {
-    return new Promise<Object>((resolve, reject) => {
-      resolve({ dara: "ok" })
-    })
-  }
+  ) { }
 
   @post('/files', {
     responses: {

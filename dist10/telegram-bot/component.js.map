@@ -1,0 +1,1 @@
+{"version":3,"file":"component.js","sourceRoot":"","sources":["../../src/telegram-bot/component.ts"],"names":[],"mappings":";;AAAA,yCAA+D;AAC/D,iDAA6C;AAC7C,+CAA4C;AAI5C,MAAa,oBAAoB;IAM7B;QACI,IAAI,CAAC,QAAQ,GAAG,CAAC,IAAI,cAAO,CAAC,4BAA4B,CAAC,CAAC,OAAO,CAAC,4BAAa,CAAC,CAAC,CAAC;QACnF,IAAI,CAAC,WAAW,GAAG,CAAC,2BAAa,CAAC,CAAC;IACvC,CAAC;CACJ;AAVD,oDAUC"}

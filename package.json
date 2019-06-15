@@ -13,7 +13,8 @@
   "scripts": {
     "build:apidocs": "lb-apidocs",
     "build": "lb-tsc es2017 --outDir dist",
-    "build:watch": "lb-tsc --watch",
+    "build:watch": "lb-tsc es2017 --outDir dist --watch",
+    "start:dev": "nodemon --watch ./dist --inspect ./index.js",
     "clean": "lb-clean dist",
     "lint": "npm run prettier:check && npm run tslint",
     "lint:fix": "npm run tslint:fix && npm run prettier:fix",

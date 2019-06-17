@@ -2,3 +2,8 @@ export * from './role.repository';
 export * from './user-role.repository';
 export * from './user.repository';
 export * from './file.repository';
+export * from './item-field-type-value.repository';
+export * from './item-field-type.repository';
+export * from './item-field.repository';
+export * from './category.repository';
+export * from './item.repository';

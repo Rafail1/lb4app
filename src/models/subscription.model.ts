@@ -16,7 +16,7 @@ export class Subscription extends Entity {
   clientId: number;
 
   @belongsTo(() => Category)
-  categoryId: string
+  category: string
 
   constructor(data?: Partial<Subscription>) {
     super(data);

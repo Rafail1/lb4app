@@ -37,11 +37,7 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
             const user = await this.userRepository.findOne({ where: { hash } });
             if (!user) return done(null, false);
             const { type, model } = this.metadata;
-            if (type === SecuredType.OWNER) {
-                await this.verifyOwner(user, id, model);
-            } else {
-                await this.verifyRoles(user);
-            }
+            await this.verifyRoles(user);
             done(null, user);
         } catch (err) {
             if (err.name === 'UnauthorizedError') done(null, false);
@@ -49,9 +45,6 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
         }
     }
 
-    async verifyOwner(user: User, id: string, model?: Persistable) {
-        console.log(model);
-    }
     async verifyRoles(user: User) {
         const { type, roles } = this.metadata;
 
@@ -60,14 +53,14 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
         if (type === SecuredType.HAS_ANY_ROLE) {
             if (!roles.length) return;
             const { count } = await this.userRoleRepository.count({
-                userId: user.id,
-                roleId: { inq: roles },
+                user: user.id,
+                role: { inq: roles },
             });
 
             if (count) return;
         } else if (type === SecuredType.HAS_ROLES && roles.length) {
-            const userRoles = await this.userRoleRepository.find({ where: { userId: user.id } });
-            const roleIds = userRoles.map(ur => ur.roleId);
+            const userRoles = await this.userRoleRepository.find({ where: { user: user.id } });
+            const roleIds = userRoles.map(ur => ur.role);
             let valid = true;
             for (const role of roles)
                 if (!roleIds.includes(role)) {

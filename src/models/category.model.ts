@@ -24,13 +24,13 @@ export class Category extends Entity {
   title: string;
 
   @belongsTo(() => IBlock)
-  iblockId: string;
+  iblock: string;
 
   @belongsTo(() => Category)
-  parentId: string;
+  parent: string;
 
   @belongsTo(() => Bot)
-  botId: string;
+  bot: string;
 
   constructor(data?: Partial<Category>) {
     super(data);

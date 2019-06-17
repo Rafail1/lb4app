@@ -9,13 +9,13 @@ export class Owner {
 
   }
   ownerWhere(where: Where) {
-    Object.assign(where, { userId: this.currentUser.id });
+    Object.assign(where, { user: this.currentUser.id });
   }
   ownerFilter(filter: Filter) {
-    Object.assign(filter, { where: { userId: this.currentUser.id } });
+    Object.assign(filter, { where: { user: this.currentUser.id } });
   }
   async checkOwner(repository: any, id: any) {
-    const cnt = await repository.count({ id: id, userId: this.currentUser.id });
+    const cnt = await repository.count({ id: id, user: this.currentUser.id });
     if (!cnt.count) {
       throw new HttpErrors.Unauthorized('Only owner can do it');
     }

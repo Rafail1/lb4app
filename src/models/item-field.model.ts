@@ -2,17 +2,23 @@ import { Entity, model, property, belongsTo } from '@loopback/repository';
 import { Bot } from '../telegram-bot/models';
 
 @model()
-export class File extends Entity {
+export class ItemField extends Entity {
   @property({
     type: 'string',
     id: true,
   })
   id?: string;
 
-  @belongsTo(() => Bot)
-  bot: number
+  @property({
+    type: 'string',
+    required: true,
+  })
+  title: string;
 
-  constructor(data?: Partial<File>) {
+  @belongsTo(() => Bot)
+  bot: string
+
+  constructor(data?: Partial<ItemField>) {
     super(data);
   }
 }

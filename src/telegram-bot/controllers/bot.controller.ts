@@ -4,7 +4,7 @@ import { repository, Filter, Where } from '@loopback/repository';
 import { secured, SecuredType, MyAuthActionProvider } from "../../telegram-authorization";
 import { Bot } from '../models';
 import { AuthenticationBindings, AuthenticateFn, UserProfile } from '@loopback/authentication';
-import { inject } from '@loopback/core';
+import { inject, intercept } from '@loopback/core';
 import { User } from '../../models';
 import { Owner } from '../../custom/owner';
 
@@ -19,7 +19,7 @@ export class BotController extends Owner {
     @post('/bots')
     @secured(SecuredType.IS_AUTHENTICATED)
     async createBot(@requestBody({ required: true }) bot: Bot) {
-        bot.userId = this.currentUser.id!;
+        bot.user = this.currentUser.id!;
         try {
             return await this.botRepository.create(bot)
         } catch (e) {
@@ -41,7 +41,7 @@ export class BotController extends Owner {
         },
     })
     @secured(SecuredType.IS_AUTHENTICATED)
-    async getBots(@param.query.object('filter', getFilterSchemaFor(Bot)) filter: Filter = {}): Promise<Bot[]> {
+    async getBots(@param.query.object('filter', getFilterSchemaFor(Bot)) filter: Filter<Bot> = {}): Promise<Bot[]> {
         this.ownerFilter(filter)
         return await this.botRepository.find(filter)
     }
@@ -57,7 +57,7 @@ export class BotController extends Owner {
     })
     async updateAll(
         @requestBody() data: Bot,
-        @param.query.object('where', getWhereSchemaFor(Bot)) where: Where = {},
+        @param.query.object('where', getWhereSchemaFor(Bot)) where: Where<Bot> = {},
     ): Promise<number> {
         this.ownerWhere(where)
         const updatedCount = await this.botRepository.updateAll(data, where);

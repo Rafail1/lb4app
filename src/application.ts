@@ -1,18 +1,19 @@
-import {BootMixin} from '@loopback/boot';
-import {ApplicationConfig} from '@loopback/core';
+import { BootMixin } from '@loopback/boot';
+import { ApplicationConfig } from '@loopback/core';
 import {
     RestExplorerBindings,
     RestExplorerComponent,
 } from '@loopback/rest-explorer';
-import { RepositoryMixin} from '@loopback/repository';
-import {RestApplication} from '@loopback/rest';
-import {ServiceMixin} from '@loopback/service-proxy';
+import { RepositoryMixin } from '@loopback/repository';
+import { RestApplication } from '@loopback/rest';
+import { ServiceMixin } from '@loopback/service-proxy';
 import * as path from 'path';
-import {MySequence} from './sequence';
-import {UserRepository, UserRoleRepository, RoleRepository} from './repositories';
-import {User} from "./models";
-import {TelegramAuthorizationComponent} from "./telegram-authorization";
-import {TelegramBotComponent} from "./telegram-bot";
+import { MySequence } from './sequence';
+import { UserRepository, UserRoleRepository, RoleRepository } from './repositories';
+import { User } from "./models";
+import { TelegramAuthorizationComponent } from "./telegram-authorization";
+import { TelegramBotComponent } from "./telegram-bot";
+import { Auth } from "./interceptors"
 export class KerzachiApplication extends BootMixin(
     ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
@@ -22,6 +23,7 @@ export class KerzachiApplication extends BootMixin(
         this.bind(RestExplorerBindings.CONFIG).to({
             path: '/explorer',
         });
+        this.bind('auth').toProvider(Auth);
         this.component(TelegramAuthorizationComponent);
         this.component(TelegramBotComponent);
         this.component(RestExplorerComponent);
@@ -43,7 +45,7 @@ export class KerzachiApplication extends BootMixin(
         //     );
     }
 
-    init(userRepository:UserRepository, userRoleRepository:UserRoleRepository, roleRepository:RoleRepository) {
+    init(userRepository: UserRepository, userRoleRepository: UserRoleRepository, roleRepository: RoleRepository) {
 
         userRepository.create({
             auth_date: 1558614982,
@@ -53,9 +55,9 @@ export class KerzachiApplication extends BootMixin(
             last_name: "Eletag",
             photo_url: "https://t.me/i/userpic/320/eletag.jpg",
             username: "eletag"
-        }).then((user:User) => {
-            roleRepository.create({id:'ADMIN', description: "admin"}).then((role) => {
-                userRoleRepository.create({userId:user.id, roleId: role.id}).then((success) => {
+        }).then((user: User) => {
+            roleRepository.create({ id: 'ADMIN', description: "admin" }).then((role) => {
+                userRoleRepository.create({ user: user.id, role: role.id }).then((success) => {
                     console.log(success);
                 })
             })

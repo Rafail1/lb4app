@@ -65,8 +65,9 @@
     <h3>OpenAPI spec: <a href="/openapi.json">/openapi.json</a></h3>
     <h3>API Explorer: <a href="/explorer">/explorer</a></h3>
   </div>
-  <form action="/upload" method="POST" enctype="multipart/form-data">
+  <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="return send(this);">
     <input type="file" name="photo" />
+    <input type="hidden" name="botId" value="773534786" />
     <button type="submit">submit</button>
   </form>
   <footer class="power">
@@ -79,6 +80,28 @@
   <script type="text/javascript">
     function onTelegramAuth(user) {
       console.log(user);
+    }
+    function send(form) {
+
+
+      var formData = new FormData(form);
+
+
+
+      var request = new XMLHttpRequest();
+      try {
+
+        request.open("POST", "/upload");
+
+        request.setRequestHeader('authorization', 'f97dd5eebc002249f3babf43d8e1485eb676d67f3297937ddfbc3e3643aca94f');
+
+      } catch (e) {
+
+        console.log(e)
+      }
+      request.send(formData);
+
+      return false
     }
   </script>
 </body>

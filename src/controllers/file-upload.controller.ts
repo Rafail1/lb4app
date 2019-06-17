@@ -3,17 +3,22 @@ import multer = require("multer");
 // Uncomment these imports to begin using these cool features!
 
 import { inject } from '@loopback/context';
-import { post, requestBody, Request, RestBindings, Response, get } from "@loopback/rest";
+import { post, requestBody, Request, RestBindings, Response, get, HttpErrors } from "@loopback/rest";
 import { BotRepository } from "../telegram-bot";
 import { repository } from "@loopback/repository";
 import fs = require("fs");
 import { FileRepository } from "../repositories";
+import { secured, SecuredType } from "../telegram-authorization";
+import { User } from "../models";
+import { AuthenticationBindings } from "@loopback/authentication";
 
 export class FileUploadController {
   storage: multer.StorageEngine;
   constructor(
     @repository(FileRepository) private fileRepository: FileRepository,
-    @repository(BotRepository) private botRepository: BotRepository) {
+    @repository(BotRepository) private botRepository: BotRepository,
+    @inject(AuthenticationBindings.CURRENT_USER) protected currentUser: User
+  ) {
     this.storage = multer.diskStorage({
       destination: function (req, file, cb) {
         cb(null, __dirname + '/../../tmp/uploads')
@@ -25,6 +30,7 @@ export class FileUploadController {
     })
   }
 
+  @secured(SecuredType.IS_AUTHENTICATED)
   @post('/upload', {
     responses: {
       200: {
@@ -54,26 +60,41 @@ export class FileUploadController {
     @inject(RestBindings.Http.RESPONSE) response: Response,
   ): Promise<object> {
     const upload = multer({ storage: this.storage });
-    const botId = 773534786;
-    const bot = await this.botRepository.getBot(botId);
-
     return new Promise<object>((resolve, reject) => {
       upload.any()(request, response, async err => {
         if (err) reject(err);
         else {
-
           const files = Object.values(request.files)
           const path = files[0].path
-          const fi = await bot.sendPhoto(453964513, fs.createReadStream(path))
-          if (!fi || !fi.photo) {
-            const error = new Error('error uploading file to bot');
-            return reject(error)
+          try {
+            const botId = request.body && request.body.botId;
+            if (!botId) throw new HttpErrors.BadRequest('no bot id');
+
+            const bot = await this.botRepository.getBot(botId);
+            if (!bot) throw new HttpErrors.BadRequest("bot not found");
+
+            const fi = await bot.sendPhoto(this.currentUser.id!, fs.createReadStream(path))
+            if (!fi || !fi.photo) {
+              throw new HttpErrors.BadRequest("error uploading file to bot");
+            }
+            const l = fi.photo.length
+            const fid = fi.photo[l - 1].file_id
+
+            let tFile;
+            try {
+              const exists = await this.fileRepository.findById(fid);
+              tFile = await bot.getFileLink(exists.id!)
+            } catch (e) {
+              const file = await this.fileRepository.create({ id: fid, bot: botId })
+              tFile = await bot.getFileLink(file.id!)
+            }
+            fs.unlinkSync(path);
+            resolve({ link: tFile, id: fid });
+          } catch (e) {
+            fs.unlinkSync(path);
+            reject(e);
           }
-          const l = fi.photo.length
-          const file = await this.fileRepository.create({ id: fi.photo[l - 1].file_id, botId, uniqueId: "123" })
-          fs.unlinkSync(path)
-          const tFile = await bot.getFileLink(file.id!)
-          resolve({ link: tFile });
+
         }
       });
     });

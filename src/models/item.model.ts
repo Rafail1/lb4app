@@ -1,5 +1,6 @@
-import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { Entity, model, property, belongsTo, hasOne, hasMany } from '@loopback/repository';
 import { IBlock } from './i-block.model';
+import { ItemFile } from './item-file.model';
 
 @model()
 export class Item extends Entity {
@@ -33,9 +34,22 @@ export class Item extends Entity {
   price?: number;
 
   @belongsTo(() => IBlock)
-  iblockId: string
+  iblock: string
 
   constructor(data?: Partial<Item>) {
     super(data);
   }
 }
+
+
+export interface ItemRelations {
+  iblock?: string
+  images?: string[]
+  categories?: string[]
+  fields?: string[]
+  components?: string[]
+  buttons?: object
+  template?: string
+}
+
+export type ItemWithRelations = Item & ItemRelations;

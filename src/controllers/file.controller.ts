@@ -4,6 +4,7 @@ import {
   Filter,
   repository,
   Where,
+  AnyObject,
 } from '@loopback/repository';
 import {
   post,
@@ -21,10 +22,9 @@ import {
 } from '@loopback/rest';
 import { File } from '../models';
 import { FileRepository } from '../repositories';
-import { inject } from '@loopback/core';
 import multer = require('multer');
-import { resolve } from 'url';
 import { BotRepository } from '../telegram-bot';
+import { secured, SecuredType } from '../telegram-authorization';
 export class FileController {
   storage: multer.StorageEngine;
   constructor(
@@ -34,6 +34,7 @@ export class FileController {
     public botRepository: BotRepository
   ) { }
 
+  @secured(SecuredType.IS_AUTHENTICATED)
   @post('/files', {
     responses: {
       '200': {
@@ -46,6 +47,7 @@ export class FileController {
     return await this.fileRepository.create(file);
   }
 
+  @secured(SecuredType.HAS_ROLES, ['admin'])
   @get('/files/count', {
     responses: {
       '200': {
@@ -55,11 +57,12 @@ export class FileController {
     },
   })
   async count(
-    @param.query.object('where', getWhereSchemaFor(File)) where?: Where,
+    @param.query.object('where', getWhereSchemaFor(File)) where?: Where<File>,
   ): Promise<Count> {
     return await this.fileRepository.count(where);
   }
 
+  @secured(SecuredType.IS_AUTHENTICATED)
   @get('/files', {
     responses: {
       '200': {
@@ -73,11 +76,12 @@ export class FileController {
     },
   })
   async find(
-    @param.query.object('filter', getFilterSchemaFor(File)) filter?: Filter,
+    @param.query.object('filter', getFilterSchemaFor(File)) filter?: Filter<File>,
   ): Promise<File[]> {
     return await this.fileRepository.find(filter);
   }
 
+  @secured(SecuredType.HAS_ROLES, ['admin'])
   @patch('/files', {
     responses: {
       '200': {
@@ -92,7 +96,7 @@ export class FileController {
   ): Promise<Count> {
     return await this.fileRepository.updateAll(file, where);
   }
-
+  @secured(SecuredType.IS_AUTHENTICATED)
   @get('/files/{id}', {
     responses: {
       '200': {
@@ -102,9 +106,11 @@ export class FileController {
     },
   })
   async findById(@param.path.string('id') id: string): Promise<File> {
+
     return await this.fileRepository.findById(id);
   }
 
+  @secured(SecuredType.HAS_ROLES, ['admin'])
   @patch('/files/{id}', {
     responses: {
       '204': {
@@ -119,6 +125,7 @@ export class FileController {
     await this.fileRepository.updateById(id, file);
   }
 
+  @secured(SecuredType.HAS_ROLES, ['admin'])
   @put('/files/{id}', {
     responses: {
       '204': {
@@ -133,6 +140,7 @@ export class FileController {
     await this.fileRepository.replaceById(id, file);
   }
 
+  @secured(SecuredType.IS_AUTHENTICATED)
   @del('/files/{id}', {
     responses: {
       '204': {
@@ -143,6 +151,7 @@ export class FileController {
   async deleteById(@param.path.string('id') id: string): Promise<void> {
     await this.fileRepository.deleteById(id);
   }
+
 
   @get('/testFile', {
     responses: {
@@ -155,6 +164,7 @@ export class FileController {
     const file = await this.fileRepository.findOne()
     const botId = 773534786;
     const bot = await this.botRepository.getBot(botId);
-    await bot.sendPhoto(453964513, file!.id!)
+    const res = await bot.getMe()
+    console.log(res)
   }
 }

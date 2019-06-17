@@ -37,7 +37,7 @@ export class Bot extends Entity {
 
 
     @belongsTo(() => User)
-    userId: number;
+    user: number;
 
     constructor(data?: Partial<Bot>) {
         super(data);

@@ -1,7 +1,7 @@
-import {Request, RestBindings, get, ResponseObject, param} from '@loopback/rest';
-import {inject} from '@loopback/context';
-import {secured, SecuredType} from "../telegram-authorization";
-import {Bot} from "../telegram-bot/models";
+import { Request, RestBindings, get, ResponseObject, param } from '@loopback/rest';
+import { inject, intercept } from '@loopback/context';
+import { secured, SecuredType } from "../telegram-authorization";
+import { Bot } from "../telegram-bot/models";
 
 /**
  * OpenAPI response for ping()
@@ -13,13 +13,13 @@ const PING_RESPONSE: ResponseObject = {
             schema: {
                 type: 'object',
                 properties: {
-                    greeting: {type: 'string'},
-                    date: {type: 'string'},
-                    url: {type: 'string'},
+                    greeting: { type: 'string' },
+                    date: { type: 'string' },
+                    url: { type: 'string' },
                     headers: {
                         type: 'object',
                         properties: {
-                            'Content-Type': {type: 'string'},
+                            'Content-Type': { type: 'string' },
                         },
                         additionalProperties: true,
                     },
@@ -55,37 +55,31 @@ export class PingController {
     @get('/ping/is-authenticated')
     @secured(SecuredType.IS_AUTHENTICATED)
     testIsAuthenticated() {
-        return {message: 'isAuthenticated: OK'};
+        return { message: 'isAuthenticated: OK' };
     }
 
     @get('/ping/permit-all')
     @secured(SecuredType.PERMIT_ALL)
     testPermitAll() {
-        return {message: 'permitAll: OK'};
+        return { message: 'permitAll: OK' };
     }
 
     @get('/ping/deny-all')
     @secured(SecuredType.DENY_ALL)
     testDenyAll() {
-        return {message: 'denyAll: OK'};
+        return { message: 'denyAll: OK' };
     }
 
     @get('/ping/has-any-role')
     @secured(SecuredType.HAS_ANY_ROLE, ['ADMIN', 'ADMIN2'])
     testHasAnyRole() {
-        return {message: 'hasAnyRole: OK'};
-    }
-
-    @get('/ping/has-roles/{id}')
-    @secured(SecuredType.OWNER)
-    testIdRoles(@param.path.string('id') id: string) {
-        return {message: 'hasOwner: OK'};
+        return { message: 'hasAnyRole: OK' };
     }
 
     @get('/ping/has-roles')
     @secured(SecuredType.HAS_ROLES, ['ADMIN', 'ADMIN2'])
     testHasRoles() {
-        return {message: 'hasRoles: OK'};
+        return { message: 'hasRoles: OK' };
     }
 
 

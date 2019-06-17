@@ -8,9 +8,10 @@ export class ItemCategory extends Entity {
   constructor(data?: Partial<ItemCategory>) {
     super(data);
   }
+
   @belongsTo(() => Category)
-  categotyId: string
+  categoty: string
 
   @belongsTo(() => Item)
-  itemId: string
+  item: string
 }

@@ -7,3 +7,4 @@ export * from './item-field-type.repository';
 export * from './item-field.repository';
 export * from './category.repository';
 export * from './item.repository';
+export * from './i-block.repository';

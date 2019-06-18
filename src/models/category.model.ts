@@ -1,6 +1,6 @@
 import { Entity, model, property, belongsTo, hasMany } from '@loopback/repository';
 import { IBlock } from './i-block.model';
-import { Bot } from '../telegram-bot/models';
+import { type } from 'os';
 
 @model()
 export class Category extends Entity {
@@ -29,10 +29,14 @@ export class Category extends Entity {
   @belongsTo(() => Category)
   parent: string;
 
-  @belongsTo(() => Bot)
-  bot: string;
-
   constructor(data?: Partial<Category>) {
     super(data);
   }
 }
+
+export interface CategoryRelation {
+  iblock?: string
+  parent?: string
+}
+
+export type CategoryWithRelation = Category & CategoryRelation

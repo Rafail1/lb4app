@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { Bot } from '../telegram-bot/models';
 
 @model()
 export class IBlock extends Entity {
@@ -14,8 +15,15 @@ export class IBlock extends Entity {
   })
   title: string;
 
+  @belongsTo(() => Bot)
+  bot: number
 
   constructor(data?: Partial<IBlock>) {
     super(data);
   }
+}
+
+
+export interface IBlockWithRelations {
+  bot?: number
 }

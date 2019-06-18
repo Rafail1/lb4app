@@ -28,15 +28,16 @@ export class ItemController {
   @post('/items', {
     responses: {
       '200': {
-        description: 'Item model instance',
+        description: 'itemWithRelations model instance',
         content: { 'application/json': { schema: { 'x-ts-type': Item } } },
       },
-    },
+    }
   })
   async create(@requestBody() itemWithRelations: ItemWithRelations): Promise<Item> {
     const images = itemWithRelations.images
     const iblock = itemWithRelations.iblock
     const categories = itemWithRelations.categories
+    const template = itemWithRelations.template
     const fields = itemWithRelations.fields
     return await this.itemRepository.create(itemWithRelations);
   }

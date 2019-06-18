@@ -65,9 +65,23 @@
     <h3>OpenAPI spec: <a href="/openapi.json">/openapi.json</a></h3>
     <h3>API Explorer: <a href="/explorer">/explorer</a></h3>
   </div>
-  <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="return send(this);">
-    <input type="file" name="photo" />
-    <input type="hidden" name="botId" value="773534786" />
+
+  <form action="/iblocks" method="POST" enctype="multipart/form-data" onsubmit="return send(this);">
+    <input type="hidden" name="bot" value="773534786" />
+    <input name="title" />
+    <button type="submit">submit</button>
+  </form>
+
+  <h3>Item</h3>
+  <form action="/items" method="POST" enctype="multipart/form-data" onsubmit="return sendFD(this);">
+    <input type="file" name="images" multiple />
+    <input type="hidden" name="bot" value="773534786" />
+    <button type="submit">submit</button>
+  </form>
+  <h3>Category</h3>
+  <form action="/categories" method="POST" enctype="multipart/form-data" onsubmit="return send(this);">
+    <input type="hidden" value="5d09295b3704e725a0428fd2" name="iblock" />
+    <input name="title" />
     <button type="submit">submit</button>
   </form>
   <footer class="power">
@@ -81,26 +95,34 @@
     function onTelegramAuth(user) {
       console.log(user);
     }
-    function send(form) {
-
-
+    function sendFD(form) {
       var formData = new FormData(form);
-
-
-
       var request = new XMLHttpRequest();
       try {
-
-        request.open("POST", "/upload");
-
+        request.open("POST", form.action);
         request.setRequestHeader('authorization', 'f97dd5eebc002249f3babf43d8e1485eb676d67f3297937ddfbc3e3643aca94f');
-
       } catch (e) {
-
         console.log(e)
       }
       request.send(formData);
+      return false
+    }
 
+    function send(form) {
+      var formData = new FormData(form);
+      var request = new XMLHttpRequest();
+      try {
+        request.open("POST", form.action);
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        request.setRequestHeader('authorization', 'f97dd5eebc002249f3babf43d8e1485eb676d67f3297937ddfbc3e3643aca94f');
+      } catch (e) {
+        console.log(e)
+      }
+      var object = {};
+      formData.forEach(function (value, key) {
+        object[key] = Number.isInteger(value) ? parseInt(value) : value;
+      });
+      request.send(JSON.stringify(object));
       return false
     }
   </script>

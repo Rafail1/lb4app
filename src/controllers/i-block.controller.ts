@@ -16,7 +16,7 @@ import {
   del,
   requestBody,
 } from '@loopback/rest';
-import { IBlock, IBlockRelations, IBlockWithRelations } from '../models';
+import { IBlock, IBlockWithRelations } from '../models';
 import { IBlockRepository } from '../repositories';
 
 export class IBlockController {

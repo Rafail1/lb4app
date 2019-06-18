@@ -9,7 +9,6 @@ import { User } from "../../models";
 import { IncomingMessage } from "http";
 import { SecuredType } from "../permission-key";
 import { Credentials, MyAuthenticationMetadata } from "../types";
-import { Persistable } from "@loopback/repository";
 
 export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
     constructor(
@@ -22,8 +21,7 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
         if (!this.metadata) return;
         return new CustomStrategy((payload: IncomingMessage, done: (err: Error | null, user?: User | false, info?: Object) => void) => {
             const hash = payload.headers.authorization || '';
-            const id = payload.url || '';
-            this.verifyToken({ hash, id }, done)
+            this.verifyToken({ hash }, done)
         });
 
     }
@@ -33,10 +31,10 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
         done: (err: Error | null, user?: User | false, info?: Object) => void,
     ) {
         try {
-            const { hash, id } = payload;
+            const { hash } = payload;
             const user = await this.userRepository.findOne({ where: { hash } });
             if (!user) return done(null, false);
-            const { type, model } = this.metadata;
+            const { type } = this.metadata;
             await this.verifyRoles(user);
             done(null, user);
         } catch (err) {
@@ -49,14 +47,12 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
         const { type, roles } = this.metadata;
 
         if ([SecuredType.IS_AUTHENTICATED, SecuredType.PERMIT_ALL].includes(type)) return;
-        console.log(type, SecuredType.HAS_ROLES);
         if (type === SecuredType.HAS_ANY_ROLE) {
             if (!roles.length) return;
             const { count } = await this.userRoleRepository.count({
                 user: user.id,
                 role: { inq: roles },
             });
-
             if (count) return;
         } else if (type === SecuredType.HAS_ROLES && roles.length) {
             const userRoles = await this.userRoleRepository.find({ where: { user: user.id } });
@@ -67,10 +63,8 @@ export class MyAuthStrategyProvider implements Provider<Strategy | undefined> {
                     valid = false;
                     break;
                 }
-
             if (valid) return;
         }
-
         throw new HttpErrors.Unauthorized('Invalid authorization');
     }
 }
